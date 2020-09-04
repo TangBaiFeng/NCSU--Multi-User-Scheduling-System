@@ -1,0 +1,19 @@
+bug in the cleardata function
+public void clearData() {
+		courseCatalog.newCourseCatalog();
+		studentDirectory.newStudentDirectory();
+	}
+	changed to 
+	public void clearData() {
+		courseCatalog = new CourseCatalog();
+		studentDirectory = new StudentDirectory();
+	}
+	
+changed 
+public void logout() {
+		currentUser = registar;
+	}
+	to 
+	public void logout() {
+		currentUser = null;
+	}
